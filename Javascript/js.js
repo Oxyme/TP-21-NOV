@@ -12,7 +12,8 @@ var Engine = Matter.Engine,
 
     var images = [
     "../Images/pizza.png",
-    "../Images/saucisse.png"
+    "../Images/saucisse.png",
+    "../Images/couverts-croises.png"
   
 ];
 // create an engine
@@ -106,3 +107,38 @@ Matter.Events.on(engine, "beforeUpdate", () => {
 });
 
 
+
+
+
+
+
+
+// DEUXIEME CANVA
+
+const canvas2 = document.getElementById('canvas2');
+canvas2.width = window.innerWidth;
+canvas2.height = window.innerHeight;
+
+const engine2 = Matter.Engine.create();
+const render2 = Matter.Render.create({
+  canvas: canvas2,
+  engine: engine2,
+  options: {
+    wireframes: false,
+    background: 'transparent' // pour voir le fond beige derrière
+  }
+});
+
+// Exemple de bodies pour le second canvas
+const box2 = Matter.Bodies.circle(400, 100, 40, {
+  render: { fillStyle: '#F4A261' }
+});
+
+Matter.World.add(engine2.world, [box2, ground2]);
+Matter.Engine.run(engine2);
+Matter.Render.run(render2);
+
+window.addEventListener('resize', () => {
+  canvas1.width = canvas2.width = window.innerWidth;
+  canvas1.height = canvas2.height = window.innerHeight;
+});

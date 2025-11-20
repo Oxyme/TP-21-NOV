@@ -14,6 +14,7 @@
 
 <body>
     <canvas id="matter-canvas"></canvas>
+    <canvas id="canvas2"></canvas>
     <div class="container mt-5">
         <h1 class="mb-4">Restaurant Database</h1>
         <!-- Formulaire pour permettre à l'utilisateur de choisir une entité à afficher -->

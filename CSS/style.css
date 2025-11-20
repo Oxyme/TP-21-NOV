@@ -1,5 +1,5 @@
 body {
-  background-color: #1b1b1b;
+  background-color: #FFF8F0;
   color: #eaeaea;
   font-family: "Arial", sans-serif;
 }
@@ -18,9 +18,9 @@ h1 {
 
 .form-select,
 .btn-primary {
-  background-color: #3a3a3a;
-  border: none;
-  color: #eaeaea;
+   background-color: #E0E0E0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
 
 .form-select:focus,
@@ -29,11 +29,11 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #E76F51;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #F4A261;
 }
 
 .card {
@@ -61,4 +61,13 @@ h1 {
     height: 100vh;
     z-index: -1;       /* derrière le HTML */
     display: block;
+}
+#canvas2 {
+  position: absolute;   /* superposé */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* le canvas ne bloque pas le clic sur le contenu HTML */
+  z-index: 9999;        /* très au-dessus de ton contenu HTML */
 }
