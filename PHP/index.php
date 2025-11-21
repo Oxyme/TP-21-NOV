@@ -8,9 +8,18 @@
     <title>Restaurant Database</title>
     <!-- Intégration de Bootstrap pour utiliser ses composants et styles préconçus -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--CSS-->
     <link rel="stylesheet" href="../CSS/style.css"/>
-    <script src="../Framework/matter.js"></script>
-</head>
+    <!--JS-->
+    <script src="../Library/matter.js"></script>
+     <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+   
 
 <body>
     <canvas id="matter-canvas"></canvas>
@@ -28,6 +37,7 @@
                     <option value="categories">Categories</option>
                 </select>
             </div>
+            <button onclick="history.back()" class="btn btn-primary">Retour</button>
             <button type="submit" class="btn btn-primary">Display</button>
         </form>
         <div id="results" class="mt-4">

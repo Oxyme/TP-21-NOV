@@ -13,8 +13,14 @@ var Engine = Matter.Engine,
     var images = [
     "../Images/pizza.png",
     "../Images/saucisse.png",
-    "../Images/couverts-croises.png"
-  
+    "../Images/couverts-croises.png",
+     "../Images/jus.png",
+     "../Images/steak.png",
+     "../Images/salade.png",
+     "../Images/cuisse-de-poulet.png",
+     "../Images/frites.png",
+     "../Images/saucisse.png"
+
 ];
 // create an engine
 //ar engine = Engine.create(),
@@ -51,8 +57,8 @@ var stack = Composites.stack(0, 20, 20, 5, 0, 0, function(x, y) {
         render: {
             sprite: {
                 texture: images[Math.floor(Math.random() * images.length)],
-                xScale: 0.1,
-                yScale: 0.1
+                xScale: 0.15,
+                yScale: 0.15
             }
         }
     });
@@ -120,6 +126,7 @@ canvas2.width = window.innerWidth;
 canvas2.height = window.innerHeight;
 
 const engine2 = Matter.Engine.create();
+
 const render2 = Matter.Render.create({
   canvas: canvas2,
   engine: engine2,
@@ -134,11 +141,15 @@ const box2 = Matter.Bodies.circle(400, 100, 40, {
   render: { fillStyle: '#F4A261' }
 });
 
-Matter.World.add(engine2.world, [box2, ground2]);
-Matter.Engine.run(engine2);
+Matter.World.add(engine2.world, [box2]);
+
+const runner2 = Matter.Runner.create();
+Matter.Runner.run(runner2, engine2); // <-- obligatoire
+
 Matter.Render.run(render2);
 
+
 window.addEventListener('resize', () => {
-  canvas1.width = canvas2.width = window.innerWidth;
-  canvas1.height = canvas2.height = window.innerHeight;
+  canvas.width = canvas2.width = window.innerWidth;
+  canvas.height = canvas2.height = window.innerHeight;
 });

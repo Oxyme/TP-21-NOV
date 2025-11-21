@@ -1,17 +1,23 @@
 body {
   background-color: #FFF8F0;
   color: #eaeaea;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif;  
+  max-width: 70%;   /* la largeur que tu veux */
+  margin: 0 auto;
 }
 
 .container {
-  background: #2b2b2b;
+  background: #F08080;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
+   font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -19,13 +25,20 @@ h1 {
 .form-select,
 .btn-primary {
    background-color: #E0E0E0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   border-radius: 12px;
+  border: none;
+
 }
 
 .form-select:focus,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:active {
   box-shadow: none;
+  
+}
+.form-select {
+  background-color: #E76F51;
 }
 
 .btn-primary {
@@ -43,15 +56,25 @@ h1 {
 }
 
 .card-title {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.5rem;
 }
 
 .card-text {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1rem;
 }
 .mb-4 {
-  font-family: Times, "Times New Roman", Georgia, serif;
+ /* font-family: Times, "Times New Roman", Georgia, serif; */
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 #matter-canvas {
     position: fixed;   /* reste en arrière-plan */
@@ -61,6 +84,7 @@ h1 {
     height: 100vh;
     z-index: -1;       /* derrière le HTML */
     display: block;
+
 }
 #canvas2 {
   position: absolute;   /* superposé */
@@ -71,3 +95,15 @@ h1 {
   pointer-events: none; /* le canvas ne bloque pas le clic sur le contenu HTML */
   z-index: 9999;        /* très au-dessus de ton contenu HTML */
 }
+.playwrite-nz-guides-regular {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.libre-baskerville{
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
