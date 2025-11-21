@@ -39,6 +39,7 @@ h1 {
 }
 .form-select {
   background-color: #E76F51;
+  
 }
 
 .btn-primary {
@@ -50,9 +51,9 @@ h1 {
 }
 
 .card {
-  background-color: #333;
+  background-color: #E76F51;
   border: none;
-  color: #eaeaea;
+  color: #ffffff;
 }
 
 .card-title {
